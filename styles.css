@@ -1,0 +1,266 @@
+/* Estilos generales */
+body {
+    /* Establece la fuente general de la página */
+    font-family: 'Arial', sans-serif;
+
+    /* Define un color de fondo oscuro */
+    background-color: #1e1e1e;
+
+    /* Color de texto claro para contrastar con el fondo oscuro */
+    color: #f1f1f1;
+
+    /* Elimina el margen y padding por defecto */
+    margin: 0;
+    padding: 0;
+
+    /* Usamos Flexbox para organizar el contenido del body */
+    display: flex;
+    flex-direction: column;
+
+    /* La página ocupará al menos toda la altura de la ventana */
+    min-height: 100vh;
+}
+
+/* Encabezado */
+header {
+    /* Fondo oscuro para el encabezado */
+    background-color: #333;
+
+    /* Texto de color llamativo */
+    color: #ff6f61;
+
+    /* Espaciado alrededor del contenido del encabezado */
+    padding: 20px 0;
+
+    /* Centra el texto */
+    text-align: center;
+
+    /* Tamaño y estilo de la fuente del encabezado */
+    font-size: 2em;
+    font-weight: bold;
+
+    /* Añade una sombra debajo del encabezado */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Contenedor principal que divide la página en dos mitades */
+.container {
+    /* Utiliza Flexbox para dividir el contenido en dos mitades */
+    display: flex;
+    
+    /* Alinea los elementos de las dos mitades con espacio entre ellos */
+    justify-content: space-between;
+    
+    /* Centra los elementos verticalmente */
+    align-items: center;
+
+    /* Define el ancho máximo del contenedor */
+    width: 80%;
+    max-width: 1200px;
+
+    /* Centra el contenedor en la página */
+    margin: auto;
+
+    /* Permite que el contenedor crezca para ocupar el espacio disponible */
+    flex: 1;
+}
+
+/* Estilo de la mitad izquierda con el título */
+.left-half {
+    /* Ocupa la mitad del espacio del contenedor */
+    flex: 1;
+
+    /* Centra su contenido horizontal y verticalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-half h1 {
+    /* Centra el texto */
+    text-align: center;
+
+    /* Color del texto */
+    color: #ff6f61;
+
+    /* Tamaño y estilo de la fuente */
+    font-size: 4em;
+    letter-spacing: 2px;
+    font-weight: bold;
+
+    /* Altura de la línea y elimina márgenes adicionales */
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Estilo de la mitad derecha con el formulario */
+.right-half {
+    /* Ocupa la otra mitad del espacio del contenedor */
+    flex: 1;
+
+    /* Centra el formulario en el espacio disponible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    /* Fondo oscuro para el formulario */
+    background-color: #2b2b2b;
+
+    /* Espaciado interno del formulario */
+    padding: 30px;
+
+    /* Bordes redondeados */
+    border-radius: 20px;
+
+    /* Añade sombra alrededor del formulario */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+
+    /* Ancho total del formulario y un máximo para que no sea demasiado grande */
+    width: 100%;
+    max-width: 350px;
+
+    /* Centra el texto dentro del formulario */
+    text-align: center;
+}
+
+/* Estilos de la tabla dentro del formulario */
+table {
+    /* El ancho de la tabla ocupa todo el contenedor */
+    width: 100%;
+
+    /* Quita los espacios entre las celdas */
+    border-collapse: collapse;
+}
+
+/* Celdas de la tabla */
+td {
+    /* Espaciado interno dentro de cada celda */
+    padding: 15px;
+
+    /* Tamaño del texto */
+    font-size: 1.2em;
+
+    /* Color del texto en las celdas */
+    color: #dcdcdc;
+}
+
+/* Estilo de los campos de entrada numérica */
+input[type="number"] {
+    /* El ancho ocupa todo el contenedor menos un pequeño margen */
+    width: calc(100% - 20px);
+
+    /* Espaciado interno */
+    padding: 10px;
+
+    /* Margen superior para separar el campo de entrada de otros elementos */
+    margin-top: 10px;
+
+    /* Estilo del borde del campo de entrada */
+    border: none;
+    border-radius: 8px;
+
+    /* Fondo oscuro para el campo */
+    background-color: #3b3b3b;
+
+    /* Color del texto */
+    color: #fff;
+
+    /* Tamaño de la fuente */
+    font-size: 1.1em;
+
+    /* Transición suave cuando se interactúa con el campo */
+    transition: all 0.3s;
+}
+
+/* Estilo del botón */
+input[type="button"] {
+    /* El botón ocupa todo el ancho disponible */
+    width: 100%;
+
+    /* Espaciado interno del botón */
+    padding: 12px;
+
+    /* Margen superior para separar el botón de otros elementos */
+    margin-top: 20px;
+
+    /* Fondo con un degradado de colores */
+    background: linear-gradient(135deg, #ff6f61, #ff9966);
+
+    /* Sin borde en el botón */
+    border: none;
+
+    /* Color blanco para el texto del botón */
+    color: white;
+
+    /* Tamaño de la fuente */
+    font-size: 1.2em;
+
+    /* Bordes redondeados del botón */
+    border-radius: 8px;
+
+    /* Cambia el cursor al pasar sobre el botón */
+    cursor: pointer;
+
+    /* Fuente en negritas */
+    font-weight: bold;
+
+    /* Transiciones suaves en el tamaño y color al interactuar con el botón */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+/* Efecto hover en el botón */
+input[type="button"]:hover {
+    /* Aumenta ligeramente el tamaño del botón al pasar el cursor */
+    transform: scale(1.05);
+
+    /* Cambia el color de fondo al pasar sobre el botón */
+    background-color: #ff7e5f;
+}
+
+/* Pie de página */
+footer {
+    /* Fondo oscuro para el pie de página */
+    background-color: #333;
+
+    /* Color gris claro para el texto */
+    color: #bbb;
+
+    /* Centra el contenido del pie de página */
+    text-align: center;
+
+    /* Espaciado interno */
+    padding: 10px 0;
+
+    /* Tamaño de la fuente del pie de página */
+    font-size: 1em;
+
+    /* El pie de página está siempre al final de la página */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+
+    /* Añade sombra en la parte superior del pie de página */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 800px) {
+    /* En pantallas pequeñas, la página se muestra en una columna */
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Las dos mitades ocupan el ancho completo en dispositivos móviles */
+    .left-half, .right-half {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* El título se ajusta a un tamaño más pequeño */
+    h1 {
+        font-size: 2.5em;
+    }
+}

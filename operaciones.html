@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Metaetiqueta que define el conjunto de caracteres para el documento -->
+        <meta charset="UTF-8">
+
+        <!-- Metaetiqueta para hacer que el diseño sea sensible a dispositivos móviles -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Título de la página que aparecerá en la pestaña -->
+        <title>Operaciones Basicas</title>
+
+        <!-- Vinculación a un archivo de estilos externo llamado "styles.css" -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- Encabezado de la página -->
+        <header>
+            Mi Aplicación de Operaciones
+        </header>
+
+        <!-- Contenedor principal que contiene el título y el formulario -->
+        <div class="container">
+            <!-- Mitad izquierda: Título de la página -->
+            <div class="left-half">
+                <!-- Título de nivel 1 (h1) con un salto de línea para dividir "Operaciones" y "Básicas" -->
+                <h1>Operaciones<br>Básicas</h1>
+            </div>
+            
+            <!-- Mitad derecha: Formulario para ingresar los valores -->
+            <div class="right-half">
+                <form action="">
+                    <table>
+                        <!-- Fila para ingresar el primer número -->
+                        <tr>
+                            <td>
+                                Ingrese valor 1: 
+                                <!-- Campo de entrada para el primer valor (a) -->
+                                <input type="number" name="a" id="a">
+                            </td>
+                        </tr>
+
+                        <!-- Fila para ingresar el segundo número -->
+                        <tr>
+                            <td>
+                                Ingrese valor 2: 
+                                <!-- Campo de entrada para el segundo valor (b) -->
+                                <input type="number" name="b" id="b">
+                            </td>
+                        </tr>
+
+                        <!-- Fila con el botón para realizar el cálculo -->
+                        <tr>
+                            <td>
+                                <!-- Botón que ejecuta la función "calcular" al hacer clic -->
+                                <input type="button" value="Calcular" onclick="calcular();">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+
+        <!-- Pie de página de la aplicación -->
+        <footer>
+            © 2024 Mi Aplicación de Operaciones. Todos los derechos reservados.
+        </footer>
+
+        <!-- Script que contiene la lógica para realizar la suma -->
+        <script>
+            function calcular() {
+                // Obtiene el valor del primer número y lo convierte a un entero
+                var num1 = parseInt(document.getElementById('a').value);
+
+                // Obtiene el valor del segundo número y lo convierte a un entero
+                var num2 = parseInt(document.getElementById('b').value);
+
+                // Realiza la suma de los dos números
+                var suma = num1 + num2;
+
+                // Muestra el resultado de la suma en una ventana emergente (alert)
+                alert('La suma es: ' + suma);
+            }
+        </script>
+    </body>
+</html>
